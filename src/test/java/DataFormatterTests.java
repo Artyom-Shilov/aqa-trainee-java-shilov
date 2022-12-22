@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class DataFormatterTests {
 
-    @Test(dataProvider = "validNames", groups = "task2")
+    @Test(dataProvider = "validNames")
     public void shouldAcceptAsName(String name) {
         try {
             DataFormatter.checkIfStringHasNameFormat(name);
@@ -26,7 +26,7 @@ public class DataFormatterTests {
         };
     }
 
-    @Test(dataProvider = "invalidNames", groups = "task2")
+    @Test(dataProvider = "invalidNames")
     public void shouldThrowExceptionCheckingInvalidName(String name) {
         Assert.assertThrows(TaskException.class, () -> DataFormatter.checkIfStringHasNameFormat(name));
     }
@@ -43,7 +43,7 @@ public class DataFormatterTests {
         };
     }
 
-    @Test(dataProvider = "validStrings", groups = "task3")
+    @Test(dataProvider = "validStrings")
     public void shouldParseStringToIntegerList(String string) {
         try {
             DataFormatter.parseStringToIntegerList(string);
@@ -63,7 +63,7 @@ public class DataFormatterTests {
         };
     }
 
-    @Test(dataProvider = "invalidStrings", groups = "task3")
+    @Test(dataProvider = "invalidStrings")
     public void shouldThrowExceptionParsingInvalidString(String string) {
         Assert.assertThrows(TaskException.class, () -> DataFormatter.parseStringToIntegerList(string));
     }
