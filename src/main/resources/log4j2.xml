@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <File name="file" fileName="src/main/resources/logs/tasks.log">
+            <PatternLayout charset="UTF-8">
+                <Pattern>[%d{HH:mm:ss}] %-5p (%F) - %m%n</Pattern>
+            </PatternLayout>
+        </File>
+        <Console name="console">
+            <PatternLayout charset="UTF-8">
+                <Pattern>[%d{HH:mm:ss}] %-5p (%F) - %m%n</Pattern>
+            </PatternLayout>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="file"/>
+            <AppenderRef ref="console"/>
+        </Root>
+    </Loggers>
+</Configuration>

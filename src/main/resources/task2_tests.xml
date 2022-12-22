@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name = "Task 2 tests">
+    <test name = "Greeting by name tests">
+        <classes>
+            <class name = "GreeterByNameTests"/>
+            <class name="DataFormatterTests">
+                <methods>
+                    <include name="shouldAcceptAsName"/>
+                    <include name="shouldThrowExceptionCheckingInvalidName"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
